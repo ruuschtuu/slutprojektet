@@ -1,20 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
+/* import faker from "faker"; */
+
+/* import Form from "./Form"; */
 
 
-const Card = (props) => {
-    
+const Card = () => {
+
 
     return (
 
-        <div className={"card"} style={{ width: "18rem" }}>
-            <img src={props.image} className={"card-img-top"} alt={"Picture of a cat"} />
-            <div className={"card-body"}>
-                <h5 className={"card-title"}>Card title</h5>
-                <p className={"card-text"}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button className={"btn btn-primary"}>Boka</button>
+        <div>
+            <div class={"card"}>
+                <img src={"https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} alt={"Avatar"} style={{ width: "100%" }} />
+                <div class={"container"}>
+                    <h4 className={"title"}>Ansikts Massage</h4>
+                    <p className={"description"}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet...</p>
+                    <button className={"btn2"}><Link to={"/book"}>Boka nu</Link></button>
+                    <span className={"span-price"}>2000kr</span>
+                </div>
             </div>
         </div>
-
     )
 }
 

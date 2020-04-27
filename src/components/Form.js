@@ -10,22 +10,22 @@ class Form extends Component {
             appointmentTime: undefined,
             mobile: undefined
         }
-     
+
 
     }
 
-//spara state i localStorage
-// this and arrow function
+    //spara state i localStorage
+    // this and arrow function
 
 
-    handleOnChangeName= (e)=> {
+    handleOnChangeName = (e) => {
         this.setState({ name: e.target.value })
 
     }
-    handleOnChangeTime=(e) =>{
+    handleOnChangeTime = (e) => {
         this.setState({ appointmentTime: e.target.value })
     }
-    handleOnChangeMobile=(e)=> {
+    handleOnChangeMobile = (e) => {
         this.setState({ mobile: e.target.value })
     }
 
@@ -46,12 +46,21 @@ class Form extends Component {
 
     render() {
         return (
-            <div>
+            <div className={"formular"}>
                 <form onSubmit={this.handleOnSubmit}>
-                    <input type={"text"} placeholder={"ange ditt name"} onChange={this.handleOnChangeName}></input>
-                    <input type={"text"} placeholder={"ange önskat datum"} onChange={this.handleOnChangeTime}></input>
-                    <input type={"number"} placeholder={"ange telefon nummer"} onChange={this.handleOnChangeMobile}></input>
-                    <button type={"submit"} onSubmit={this.handleOnSubmit}>Bekräfta</button>
+                    <input type={"text"} placeholder={"Namn"} onChange={this.handleOnChangeName}></input>
+                    <input type={"text"} placeholder={"Ange datum"} onChange={this.handleOnChangeTime}></input>
+                    <input type={"number"} placeholder={"Telefon nummer"} onChange={this.handleOnChangeMobile}></input><br />
+                    <li>
+                        <label id={"label"}>Välj Tjänst</label> <br />
+                        <select name={"field4"} class={"field-select"}>
+                            <option value={"Advertise"}>Massage</option>
+                            <option value={"Partnership"}>Pedikyr</option>
+                            <option value={"General Question"}>Övrigt</option>
+                        </select>
+                    </li>
+                    <textarea placeholder={"Extra beskrivning"} onChange={this.handleOnChangeMobile}></textarea><br />
+                    <button className={"btn3"} type={"submit"} onSubmit={this.handleOnSubmit}>Bekräfta</button>
                 </form>
 
                 <div>  {this.state.name}</div>

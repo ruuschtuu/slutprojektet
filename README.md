@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+För och nackdelar med React.JS 
 
-## Available Scripts
 
-In the project directory, you can run:
+Fördelar:
 
-### `npm start`
+1. Enkel att lära sig
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ReactJS är mycket lättare att lära sig och använda. Det kommer med ett bra utbud av dokumentation, handledning och utbildningsresurser. Alla utvecklare som kommer från en JavaScript-bakgrund kan lätt förstå och börja skapa webbappar med React på några dagar.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+2. Att skapa dynamiska webbapplikationer blir mycket enklare
 
-### `npm test`
+Att skapa en dynamisk webbapplikation specifikt med HTML-strängar var svårt eftersom det kräver en komplex kodning, men React JS löst det problemet och gör det enklare. Det ger mindre kodning och ger mer funktionalitet.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Prestande förbättring 
 
-### `npm run build`
+ReactJS förbättrar prestanda på grund av virtuell DOM. DOM är en korsplattform och programmerings-API som behandlar HTML, XML eller XHTML. De flesta av utvecklarna mötte problemet när DOM uppdaterades, vilket bromsade programmets prestanda. ReactJS löst detta problem genom att införa virtuell DOM. React Virtual DOM finns helt i minnet och representerar webbläsarens DOM. På grund av detta, när vi skriver en React-komponent, skrev vi inte direkt till DOM. Istället skriver vi virtuella komponenter som reagerar kommer att förvandlas till DOM, vilket leder till en jämnare och snabbare prestanda.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Känd för att vara SEO-vänlig
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Traditionella JavaScript-ramverk har problem med att hantera SEO. Sökmotorerna har i allmänhet problem med att läsa JavaScript-tunga applikationer. Många webbutvecklare har ofta klagat på det här problemet. ReactJS övervinner detta problem som hjälper utvecklare att enkelt navigera på olika sökmotorer. Det beror på att React.js-applikationer kan köras på servern, och den virtuella DOM kommer att återges och återgå till webbläsaren som en vanlig webbsida.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Nackdelar:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Den snabba utvecklingen...
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Den höga utvecklingenstakten har en fördel och nackdel båda. I händelse av nackdel, eftersom miljön ständigt förändras så snabbt, känner några av utvecklarna inte sig bekväma att lära sig om de nya sätten att göra saker regelbundet. Det kan vara svårt för dem att anta alla dessa förändringar med alla kontinuerliga uppdateringar. De måste alltid uppdateras med sina färdigheter och lära sig nya sätt att göra saker.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Dålig dokumentation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Det är en annan nackdel som är vanligt för ständig uppdatering av teknik. Reagera teknologier som uppdateras och accelereras så snabbt att det inte finns tid att göra korrekt dokumentation. För att övervinna detta skriver utvecklarna på egen hand med utvecklingen av nya utgåvor och verktyg i sina nuvarande projekt.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+3. 
