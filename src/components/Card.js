@@ -1,28 +1,41 @@
-import React from "react";
-import { Link } from "react-router-dom";
-/* import faker from "faker"; */
-
-/* import Form from "./Form"; */
+import React, { Component } from "react";
+import GetCard from "./GetCard";
+import axios from "axios";
 
 
-const Card = () => {
+
+class Card extends Component {
 
 
-    return (
+    state = {
+        products: []
+    }
 
-        <div>
-            <div class={"card"}>
-                <img src={"https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"} alt={"Avatar"} style={{ width: "100%" }} />
-                <div class={"container"}>
-                    <h4 className={"title"}>Ansikts Massage</h4>
-                    <p className={"description"}>är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet...</p>
-                    <button className={"btn2"}><Link to={"/book"}>Boka nu</Link></button>
-                    <span className={"span-price"}>2000kr</span>
-                </div>
+    async componentDidMount() {
+        const res = await axios.get("http://localhost:1337/products")
+        console.log(res.data);
+        this.setState({ products: res.data })
+    }
+
+
+    render() {
+        return (
+            <div>
+                {this.state.products.map((product) =>
+                    <GetCard
+                        key={product.id}
+                        title={product.title}
+                        price={product.price}
+                        description={product.description}
+                        image={"http://localhost:1337" + product.image.url}
+
+
+                    />
+                )}
+
             </div>
-        </div>
-    )
+
+        )
+    }
 }
-
 export default Card;
-
