@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-/* import AdminProfile from "./Auth/AdminProfile"; */
+import AdminProfile from "./Auth/AdminProfile";
 import AdminLogin from "./Auth/AdminLogin";
 import Adminform from "./Adminform";
 
@@ -27,7 +27,7 @@ class AdminSida extends Component {
                         }
                     />
                 ) : (
-                        <Adminform userData={this.state.user} />
+                        <AdminProfile userData={this.state.user} />
 
                     )}
             </div>

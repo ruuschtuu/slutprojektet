@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Adminform from "../Adminform";
 
 
 
@@ -11,9 +12,14 @@ class AdminProfile extends Component {
     render() {
         return (
             <div>
-                Profile info {this.props.userData}
+                <h1>
+                    Welcome {this.props.userData} Admin
+                </h1>
+
 
                 <button onClick={this.logOut.bind(this)}> Logout</button>
+
+                <Adminform />
 
             </div>
         )

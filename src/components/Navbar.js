@@ -15,10 +15,10 @@ const Navbar = () => {
         </div>
         <li> <Link to={"/home"}>Hem </Link>         </li>
         <li> <Link to={"/features"}>Tjänster</Link>  </li>
-        <li> <Link to={"/book"}>Boka nu</Link>      </li>
         <li> <Link to={"/bookings"}>Mina bokningar</Link> </li>
         <li> <Link to={"/adminsida"}>Admin-sida</Link>    </li>
-        <Logout />
+        <li> <Link to={"/userpage"}>Logga in</Link>      </li>
+
       </ul>
     </div>
 

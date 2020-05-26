@@ -45,10 +45,7 @@ class Adminform extends Component {
     render() {
         return (
             <div>
-                <h1>
-                    Welcome
-                </h1>
-                <h3>{this.props.userData}</h3>
+
                 <form onSubmit={this.onSubmitToApi.bind(this)}>
                     <input type="text" name="title" placeholder="Title" />
                     <input type="text" name="description" placeholder="Description" />
@@ -60,14 +57,7 @@ class Adminform extends Component {
                     <br />
                     <button>Spara</button>
                     <br />
-                    <br />
-                    <div class="dropdown">
-                        <span>Mouse over me</span>
-                        <div class="dropdown-content">
-                            <p>Hello</p>
-                            <p>Hello</p>
-                        </div>
-                    </div>
+
 
                     {this.state.title}
                 </form>

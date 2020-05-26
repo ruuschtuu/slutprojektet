@@ -11,7 +11,7 @@ class Logout extends Component {
     render() {
         return (
             <div>
-                <li><a href="/adminsida" onClick={this.logOut.bind(this)}>Logout</a></li>
+                <button onClick={this.logOut.bind(this)}> Logout</button>
             </div>
         )
     }

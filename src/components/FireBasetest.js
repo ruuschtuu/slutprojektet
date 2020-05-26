@@ -7,6 +7,8 @@ import firebase from "./FirebaseConfig"
 class FirebaseTest extends Component {
 
     onClickFirebase() {
+
+        /*  const db = firebase.firestore(); */
         const docRef = firebase.firestore().collection("booking").doc("info")
         const docRef2 = firebase.firestore().collection("booking").doc("info2")
         //läser data from firebase

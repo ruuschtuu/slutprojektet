@@ -6,13 +6,16 @@ import Navbar from "./Navbar";
 import App from "./App";
 import "../style/_main.scss"
 import Booking from "./Booking";
-import Adminform from "./Adminform";
-import AdminLogin from "./Auth/AdminLogin";
+/* import Adminform from "./Adminform";
+import AdminLogin from "./Auth/AdminLogin"; */
 import AdminSida from "./AdminSida";
 import Notfoundpage from "./Notfoundpage";
 import Logout from "./Auth/Logout";
 import FirebaseTest from "./FireBasetest";
-
+//import UserLogin from "./AuthUser/UserLogin"
+import UserPage from "./AuthUser/UserPage";
+import Contact from "./Contact";
+import UserProfile from "./AuthUser/UserProfile";
 
 
 
@@ -33,6 +36,13 @@ const Approute = () => {
           <Route path="/firebasetest" component={FirebaseTest} exact></Route>
           <Route path="/booking" component={Booking} exact></Route>
           <Route path="/adminsida" exact component={AdminSida}></Route>
+          <Route path="/contact" exact component={Contact}></Route>
+          <Route path="/userprofile" exact component={UserProfile}></Route>
+
+
+          <Route path="/userpage" exact component={UserPage}></Route>
+
+
           <Route component={Notfoundpage}></Route>
         </Switch>
       </BrowserRouter>

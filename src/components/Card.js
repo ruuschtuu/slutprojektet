@@ -8,7 +8,8 @@ class Card extends Component {
 
 
     state = {
-        products: []
+        products: [],
+        user: []
     }
 
     async componentDidMount() {
@@ -24,6 +25,7 @@ class Card extends Component {
                 {this.state.products.map((product) =>
                     <GetCard
                         key={product.id}
+                        docId={product.id}
                         title={product.title}
                         price={product.price}
                         description={product.description}
