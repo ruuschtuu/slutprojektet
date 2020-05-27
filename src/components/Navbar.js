@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Logout from "./Auth/Logout";
+//import Logout from "./Auth/Logout";
 
 
 const Navbar = () => {
@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
         <li> <Link to={"/home"}>Hem </Link>         </li>
         <li> <Link to={"/features"}>Tjänster</Link>  </li>
-        <li> <Link to={"/bookings"}>Mina bokningar</Link> </li>
+        {/*   <li> <Link to={"/booking"}>Mina bokningar</Link> </li> */}
         <li> <Link to={"/adminsida"}>Admin-sida</Link>    </li>
         <li> <Link to={"/userpage"}>Logga in</Link>      </li>
 

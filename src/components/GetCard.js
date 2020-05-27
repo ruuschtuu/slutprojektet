@@ -3,11 +3,33 @@ import firebase from "./FirebaseConfig";
 
 class GetCard extends Component {
 
+    state = {
+        user: null || localStorage.getItem("user")
+    }
+
+    componentDidMount() {
+        firebase.auth().onAuthStateChanged(
+            user => {
+                if (user) {
+                    this.setState({ user: user.email })
+                }
+            }
+        )
+    }
+
     onClickSaveToFirestore() {
-        const docRef = firebase.firestore().collection("Boka").doc(this.props.docId.toString());
+        const userfromLocal = localStorage.getItem("user");
+        console.log(userfromLocal);
+        var user = firebase.auth().currentUser;
+        console.log(user);
+        console.log(user.uid);
+
+        const docRef = firebase.firestore().collection("users").doc(user.uid.toString())
+            .collection("products").doc(this.props.docId.toString());
 
         docRef.set({
-            name: this.props.title,
+            id: this.props.docId,
+            title: this.props.title,
             description: this.props.description,
             price: this.props.price
         })

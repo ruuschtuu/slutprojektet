@@ -16,6 +16,7 @@ import FirebaseTest from "./FireBasetest";
 import UserPage from "./AuthUser/UserPage";
 import Contact from "./Contact";
 import UserProfile from "./AuthUser/UserProfile";
+import UserUpdateProfile from "./AuthUser/UserUpdateProfile";
 
 
 
@@ -38,6 +39,7 @@ const Approute = () => {
           <Route path="/adminsida" exact component={AdminSida}></Route>
           <Route path="/contact" exact component={Contact}></Route>
           <Route path="/userprofile" exact component={UserProfile}></Route>
+          <Route path="/userPage/updateProfile" component={UserUpdateProfile} />
 
 
           <Route path="/userpage" exact component={UserPage}></Route>

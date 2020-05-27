@@ -15,6 +15,7 @@ class UserPage extends Component {
     //render() -> compononentDidMount-> uppdateras state-> render() igen
 
     componentDidMount() {
+
         firebase.auth().onAuthStateChanged(
             user => this.setState({ user: user.email, displayName: user.displayName })
         )

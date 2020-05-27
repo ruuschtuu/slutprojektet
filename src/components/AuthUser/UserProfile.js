@@ -1,10 +1,29 @@
 import React, { Component } from "react";
 import firebase from "../FirebaseConfig";
-
+import { Link } from "react-router-dom";
 
 
 
 class UserProfile extends Component {
+
+    state = {
+        email: "",
+        username: ""
+    }
+
+    componentDidMount() {
+        const userfromLocal = localStorage.getItem("user");
+        console.log(userfromLocal);
+        var user = firebase.auth().currentUser;
+        console.log(user);
+        console.log(user.displayName);
+        console.log(user.email)
+
+        this.setState({
+            username: user.displayName,
+            email: user.email
+        });
+    }
 
     logOut() {
 
@@ -46,18 +65,22 @@ class UserProfile extends Component {
     render() {
         return (
             <div>
-                <img src={this.props.image} className={"card-img-top"} alt={"img"} />
-                <br />
-                Profile info {this.props.userData}
+                <h1>Välkommen <span id="login-namn">{this.props.userData}</span></h1>
                 <br />
                 <button onClick={this.deleteAccount.bind(this)}> Radera konto</button>
                 <button onClick={this.logOut.bind(this)}> Logout</button>
-
-                <form onSubmit={this.resetPassword.bind(this)}>
-                    <input type="email" name="resetEmail"></input>
-                    <button >Reset password </button>
-                </form>
-
+                <button> <Link to={"/booking"}>Mina bokningar</Link> </button>
+                <Link
+                    to={{
+                        pathname: "/userPage/updateProfile",
+                        params: {
+                            username: this.state.username,
+                            email: this.state.email
+                        }
+                    }}
+                >
+                    <button>Edit Profile</button>
+                </Link>
             </div>
         )
     }
