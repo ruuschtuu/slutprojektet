@@ -37,6 +37,19 @@ class Booking extends Component {
     })
   }
 
+  /*  onClickRemove() {
+ 
+     var user = firebase.auth().currentUser;
+     var docRef = firebase.firestore().collection('users').doc(user.uid.toString()).delete();
+ 
+     // Remove the 'capital' field from the document
+     var removeCapital = docRef.update({
+       capital: firebase.firestore.FieldValue.delete()
+     });
+ 
+     return removeCapital;
+   } */
+
   render() {
     const loggedIn = this.state.user || localStorage.getItem("user");
     return (
@@ -45,9 +58,15 @@ class Booking extends Component {
         this.state.products.map(product => {
           return (
             <div key={product.id}>
-              <h1>{product.title}</h1>
-              <h2 id="bookingsTableDescription">{product.description}</h2>
-              <h3 id="bookingsTablePrice">{product.price}</h3>
+              <div class="card">
+                <div class="card-body">
+                  <h3>{product.title}</h3>
+                  <h5>{product.description}</h5>
+                  <p>{product.price} Kr</p>
+                </div>
+              </div>
+              {/* <button onClick={this.onClickRemove.bind(this)}>Remove</button> */}
+
             </div>
           )
         })

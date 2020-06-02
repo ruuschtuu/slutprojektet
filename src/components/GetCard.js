@@ -18,8 +18,7 @@ class GetCard extends Component {
     }
 
     onClickSaveToFirestore() {
-        const userfromLocal = localStorage.getItem("user");
-        console.log(userfromLocal);
+
         var user = firebase.auth().currentUser;
         console.log(user);
         console.log(user.uid);
