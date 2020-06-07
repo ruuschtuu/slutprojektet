@@ -29,3 +29,21 @@ Den höga utvecklingenstakten har en fördel och nackdel båda. I händelse av n
 2. Dålig dokumentation :(
 
 Det är en annan nackdel som är vanligt för ständig uppdatering av teknik. Reagera teknologier som uppdateras och accelereras så snabbt att det inte finns tid att göra korrekt dokumentation. För att övervinna detta skriver utvecklarna på egen hand med utvecklingen av nya utgåvor och verktyg i sina nuvarande projekt.
+
+
+--------------------------------------------------------------------------------------------------
+
+ Vad är CMS?
+
+ I de enklaste termerna är Content Management Systems utformade för att hjälpa användare att skapa och hantera sina webbplatser. En CMS hjälper webbansvariga att hantera många olika resurser, innehållstyper och olika data som utgör moderna webbplatser.
+
+
+ Vad är Headless CMS?
+
+ Headless CMS är ett back-end endast innehållshanteringssystem (CMS) byggt upp från grunden som ett innehållsförråd som gör innehåll tillgängligt via ett RESTful API för visning på alla enheter.
+
+
+ Headless CMS har endast:
+
+ 1:- content management backend
+ 2:- API
